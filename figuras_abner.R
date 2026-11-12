@@ -5,11 +5,6 @@
 # Scenedesmus acutus consortia (Algal Research, in preparation).
 # Genera, a partir de los CSV de esta carpeta (valores tal como aparecen en
 # la tesis de maestría de Abner Martínez-Constantino, FCQ-UASLP, agosto 2026):
-# Qué hace este script
-# Genera, a partir de los valores verificados de la tesis de maestría de
-# Abner Martínez-Constantino (FCQ-UASLP, agosto 2026), las figuras que sí
-# se pueden construir en R sin los archivos originales de salida de cada
-# herramienta:
 #   Figura 1 — Comparación de los ensamblajes (contigs por umbral + N50)
 #   Figura 2 — Bacterias más representativas por metagenoma (Kraken2)
 #   Figura 3 — Tamaño de los bins que pasan el filtro (MAGs + nucleares)
@@ -20,31 +15,6 @@
 #              predichos (valores leídos de las figuras de la tesis)
 #   Figura S0 — Identidad ANIm de BIN005 contra el panel de referencia
 #
-# Qué NO hace este script
-# No regenera los diagramas de Sankey, los heatmaps de resistomas (RGI),
-# las figuras de HGT, los mapas KEGG, las redes bipartitas (Gephi), los
-# PCA ni los heatmaps de expresión: esas figuras dependen de los archivos
-# originales de salida de cada herramienta y las debe producir Abner
-# siguiendo la lista de figuras (ver lista-figuras-para-abner.md).
-#
-# Datos
-# Los CSV de esta carpeta contienen los valores tal como aparecen en la
-# tesis. No se inventó ningún valor:
-# - La Figura 5B solo grafica las dos categorías COG con porcentaje
-#   reportado en el texto (transducción de señales en ambos metagenomas;
-#   producción y conversión de energía solo en S. acutus). El valor de
-#   energía de C. vulgaris no se reporta en la tesis y no se grafica.
-# - La Figura 7 usa valores APROXIMADOS leídos de las Figs. 52-55 de la
-#   tesis (la tesis no da los valores en el texto); el pie lo dice.
-# - La Figura S0 usa valores leídos de la Fig. 12 de la tesis; el valor
-#   de O. tauri (98.27%) es anómalo y se señala en el pie del manuscrito.
-# - Los porcentajes de BUSCO fragmentado y duplicado no están etiquetados
-#   en la Fig. 10 de la tesis; se grafican como ~3% y ~0.3% y el pie lo dice.
-#
-# Interpretación
-# Cada figura lleva su pie con el denominador explícito. Las frecuencias
-# son descriptivas: no se interpretan como enriquecimiento estadístico.
-
 Sys.setlocale("LC_ALL", "C.UTF-8")
 
 library(ggplot2)
