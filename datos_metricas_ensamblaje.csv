@@ -1,0 +1,15 @@
+metagenome,metric,value
+C. vulgaris,N50,16652
+C. vulgaris,N90,896
+C. vulgaris,auN,54574
+C. vulgaris,L50,2203
+C. vulgaris,L90,18147
+C. vulgaris,longest_contig_bp,783470
+C. vulgaris,total_span_Mb,173.285
+S. acutus,N50,27566
+S. acutus,N90,808
+S. acutus,auN,73459
+S. acutus,L50,1121
+S. acutus,L90,15737
+S. acutus,longest_contig_bp,940625
+S. acutus,total_span_Mb,147.883

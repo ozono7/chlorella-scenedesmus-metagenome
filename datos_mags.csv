@@ -1,0 +1,18 @@
+metagenome,bin,taxon,size_Mb,type
+C. vulgaris,BIN002,Pseudomonas oryzihabitans,5.546,bacterial
+C. vulgaris,BIN003,Microvirga sp. VF16,5.819,bacterial
+C. vulgaris,BIN005,Chlamydomonas reinhardtii,67.448,nuclear candidate
+C. vulgaris,BIN007,Methylobacterium bullatum,3.967,bacterial
+C. vulgaris,BIN010,Cellulomonas sp. Y8,4.040,bacterial
+C. vulgaris,BIN013,Streptomyces sp.,4.464,bacterial
+C. vulgaris,BIN017,Sphingomonas sp.,2.918,bacterial
+S. acutus,BIN003,Chlamydomonas reinhardtii,42.804,nuclear candidate
+S. acutus,BIN006,Stutzerimonas stutzeri,4.605,bacterial
+S. acutus,BIN007,Roseomonas fluvialis,6.687,bacterial
+S. acutus,BIN008,Aquibium microcysteis,5.994,bacterial
+S. acutus,BIN009,Sphingomonas koreensis,5.100,bacterial
+S. acutus,BIN010,Sphingopyxis sp.,3.216,bacterial
+S. acutus,BIN012,Flavobacterium sp.,4.002,bacterial
+S. acutus,BIN013,Nordella sp. HKS 07,7.589,bacterial
+S. acutus,BIN014,Enhydrobacter sp.,9.494,bacterial
+S. acutus,BIN016,Dyadobacter fermentans DSM 18053,6.236,bacterial

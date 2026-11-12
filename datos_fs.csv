@@ -1,0 +1,25 @@
+metagenome,mag,biotin,riboflavin,quorum_sensing,siderophores
+C. vulgaris,BIN002,0.667,0.471,0.159,0.29
+C. vulgaris,BIN003,0,0.353,0.159,0
+C. vulgaris,BIN004,0.333,0.353,0.078,0.032
+C. vulgaris,BIN005,0.333,0.353,0.035,0.032
+C. vulgaris,BIN006,0.333,0.118,0.028,0.032
+C. vulgaris,BIN007,0.667,0.294,0.134,0
+C. vulgaris,BIN008,0.333,0.294,0.092,0.032
+C. vulgaris,BIN010,0,0.471,0.124,0.032
+C. vulgaris,BIN011,0.667,0.294,0.085,0.097
+C. vulgaris,BIN012,0.667,0.353,0.078,0.032
+C. vulgaris,BIN013,0.167,0.294,0.145,0.065
+C. vulgaris,BIN014,0,0.353,0.138,0.194
+C. vulgaris,BIN017,0.167,0.294,0.078,0.032
+S. acutus,BIN003,0.667,0.471,0.042,0.032
+S. acutus,BIN004,0.167,0.059,0.025,0
+S. acutus,BIN005,0.667,0.294,0.071,0
+S. acutus,BIN006,0.667,0.471,0.148,0.032
+S. acutus,BIN007,0.167,0.353,0.155,0.065
+S. acutus,BIN009,0.667,0.353,0.117,0.032
+S. acutus,BIN010,0.667,0.294,0.124,0
+S. acutus,BIN012,0.667,0.294,0.071,0.065
+S. acutus,BIN013,0.333,0.294,0.194,0.032
+S. acutus,BIN014,0,0.353,0.194,0.065
+S. acutus,BIN016,0.333,0.294,0.081,0.065
