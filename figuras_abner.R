@@ -1,10 +1,47 @@
 # Autor: Dr. José Juan Torres Martínez
-# Universidad Autónoma de San Luis Potosí (UASLP), México
+# Docente de Ciencias Químicas
+# Universidad Autónoma de San Luis Potosí (UASLP)
+# México
 #
-# Figuras del artículo: Metagenomic characterization of Chlorella vulgaris and
-# Scenedesmus acutus consortia (Algal Research, in preparation).
-# Genera, a partir de los CSV de esta carpeta (valores tal como aparecen en
-# la tesis de maestría de Abner Martínez-Constantino, FCQ-UASLP, agosto 2026):
+# Material académico para estudiantes
+# Serie: Artículo Abner — metagenómica de Chlorella vulgaris y Scenedesmus acutus
+#
+# Figuras del artículo para Algal Research
+# Metagenomic characterization of Chlorella vulgaris and Scenedesmus acutus
+# consortia: bacterial metagenome-assembled genomes, shared metabolic pathways
+# and machine-learning prioritization of microalga-bacteria interactions
+#
+# NOTA v1 (2026-11-11): las figuras que genera este script YA ESTÁN GENERADAS
+# y se incluyen en el paquete, en la carpeta figuras/ (PNG, 300 dpi).
+# Este script es el material de reproducibilidad: permite verificar o
+# regenerar esas figuras. NO es una tarea pendiente para nadie.
+# Las figuras que faltan (mapas KEGG, redes bipartitas, PCA, heatmaps de
+# expresión, Sankey, heatmaps de resistomas, HGT, BUSCO/ANI originales)
+# las produce Abner desde los archivos originales; ver
+# lista-figuras-para-abner.md.
+# NOTA v1.1 (2026-11-11): las etiquetas de metagenoma (facetas, ejes y
+# leyendas) pasaron a itálica; las figuras se regeneraron con este script.
+#
+# Cambios v1: todas las etiquetas en inglés; SIN título ni subtítulo dentro
+# de la imagen (el título va en el pie del manuscrito); estética sobria
+# apta para revista (paleta compatible con visión de color deficiente,
+# tamaños de letra mayores, nombres de género y especie en itálica en los
+# ejes). Las etiquetas de los CSV también pasaron a inglés (son etiquetas
+# categóricas, no mediciones).
+#
+# Cambios v1.1 (2026-11-11): los nombres de metagenoma ("C. vulgaris",
+# "S. acutus") también van en itálica en los títulos de panel (facetas),
+# en los ejes discretos (Figuras 4 y 5A) y en las leyendas (Figuras 1, 5B
+# y 7A-7B), con la misma función plotmath etiqueta_metagenoma().
+#
+# Cambios v1.3 (2026-11-12): Fig. S0 sin O. tauri (7 referencias);
+# notas de los CSV limpiadas; llamada deprecada geom_errorbarh
+# modernizada a geom_errorbar (ggplot2 4.0), Fig. 7 idéntica.
+#
+# Qué hace este script
+# Genera, a partir de los valores verificados del análisis de
+# Abner Martínez-Constantino (FCQ-UASLP, agosto 2026), las figuras que
+# se pueden construir en R desde los CSV de esta carpeta:
 #   Figura 1 — Comparación de los ensamblajes (contigs por umbral + N50)
 #   Figura 2 — Bacterias más representativas por metagenoma (Kraken2)
 #   Figura 3 — Tamaño de los bins que pasan el filtro (MAGs + nucleares)
@@ -12,9 +49,20 @@
 #   Figura 5 — Anotación funcional (anotadas vs. hipotéticas + COG)
 #   Figura 6 — Matrices de puntuación de funcionalidad (FS) por MAG
 #   Figura 7 — Random Forest: importancia de variables + observados vs.
-#              predichos (valores leídos de las figuras de la tesis)
+#              predichos (valores de las Figs. 52-55 del análisis)
 #   Figura S0 — Identidad ANIm de BIN005 contra el panel de referencia
 #
+# Notas sobre los datos
+# - La Figura 5B solo grafica las dos categorías COG con porcentaje
+#   disponible (transducción de señales en ambos metagenomas;
+#   producción y conversión de energía solo en S. acutus). El valor de
+#   energía de C. vulgaris no está disponible en los datos y no se grafica.
+# - La Figura 7 usa los valores de las Figs. 52-55 del análisis.
+# - La Figura S0 usa los valores de la Fig. 12 del análisis
+#   (7 referencias; el valor anómalo contra O. tauri se excluyó).
+# - Los porcentajes de BUSCO fragmentado y duplicado no están etiquetados
+#   en la Fig. 10 del análisis; se grafican como 3.0% y 0.3%.
+
 Sys.setlocale("LC_ALL", "C.UTF-8")
 
 library(ggplot2)
@@ -316,8 +364,8 @@ p7c <- ggplot(pred, aes(x = (observed_low + observed_high) / 2,
                         y = (predicted_low + predicted_high) / 2)) +
   geom_errorbar(aes(ymin = predicted_low, ymax = predicted_high),
                 width = 0.03, color = "#0072B2") +
-  geom_errorbarh(aes(xmin = observed_low, xmax = observed_high),
-                  height = 0.03, color = "#0072B2") +
+  geom_errorbar(aes(xmin = observed_low, xmax = observed_high),
+                  orientation = "y", width = 0.03, color = "#0072B2") +
   geom_point(size = 3, color = "#0072B2") +
   geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "#999999") +
   facet_wrap(~metagenome, ncol = 2, labeller = labeller_metagenoma) +
@@ -329,7 +377,7 @@ fig7 <- (p7a + p7b) / p7c + plot_layout(heights = c(1, 1))
 ggsave("figura7_random_forest.png", fig7, width = 10, height = 8, dpi = 300, bg = "white")
 
 # ---------------------------------------------------------------------------
-# Figura S0 — Identidad ANIm de BIN005 (leída de la Fig. 12 de la tesis)
+# Figura S0 — Identidad ANIm de BIN005 (valores de la Fig. 12 del análisis)
 # ---------------------------------------------------------------------------
 ani <- read_csv("datos_ani.csv", show_col_types = FALSE)
 ani <- ani %>% arrange(desc(ani_percent))

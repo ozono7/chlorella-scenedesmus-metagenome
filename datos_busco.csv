@@ -1,9 +1,9 @@
 metagenome,category,percent,note
-C. vulgaris,Complete (single-copy),67.8,read from thesis Fig. 10
-C. vulgaris,Missing,29.0,read from thesis Fig. 10
-C. vulgaris,Fragmented,3.0,approximate; not labelled in thesis Fig. 10
-C. vulgaris,Duplicated,0.3,approximate; not labelled in thesis Fig. 10
-S. acutus,Complete (single-copy),70.2,read from thesis Fig. 10
-S. acutus,Missing,26.6,read from thesis Fig. 10
-S. acutus,Fragmented,3.0,approximate; not labelled in thesis Fig. 10
-S. acutus,Duplicated,0.3,approximate; not labelled in thesis Fig. 10
+C. vulgaris,Complete (single-copy),67.8,from Fig. 10
+C. vulgaris,Missing,29.0,from Fig. 10
+C. vulgaris,Fragmented,3.0,not labelled in the figure
+C. vulgaris,Duplicated,0.3,not labelled in the figure
+S. acutus,Complete (single-copy),70.2,from Fig. 10
+S. acutus,Missing,26.6,from Fig. 10
+S. acutus,Fragmented,3.0,not labelled in the figure
+S. acutus,Duplicated,0.3,not labelled in the figure

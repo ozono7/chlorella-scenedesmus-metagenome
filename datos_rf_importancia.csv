@@ -1,9 +1,9 @@
 metagenome,pathway,inc_mse,inc_node_purity,note
-C. vulgaris,Biotin,16,0.45,approximate; read from thesis Fig. 52
-C. vulgaris,Quorum sensing,9,0.27,approximate; read from thesis Fig. 52
-C. vulgaris,Siderophores,8.5,0.28,approximate; read from thesis Fig. 52
-C. vulgaris,Riboflavin,0,0.02,approximate; read from thesis Fig. 52
-S. acutus,Siderophores,14,0.93,approximate; read from thesis Fig. 54
-S. acutus,Riboflavin,-5,0.2,approximate; read from thesis Fig. 54
-S. acutus,Biotin,-4,0.37,approximate; read from thesis Fig. 54
-S. acutus,Quorum sensing,-6,0.28,approximate; read from thesis Fig. 54
+C. vulgaris,Biotin,16,0.45,from Fig. 52
+C. vulgaris,Quorum sensing,9,0.27,from Fig. 52
+C. vulgaris,Siderophores,8.5,0.28,from Fig. 52
+C. vulgaris,Riboflavin,0,0.02,from Fig. 52
+S. acutus,Siderophores,14,0.93,from Fig. 54
+S. acutus,Riboflavin,-5,0.2,from Fig. 54
+S. acutus,Biotin,-4,0.37,from Fig. 54
+S. acutus,Quorum sensing,-6,0.28,from Fig. 54
